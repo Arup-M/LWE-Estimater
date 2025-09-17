@@ -146,10 +146,10 @@ if __name__ == "__main__":
     # --- Define your LWE parameters here ---
     n = 1280       # LWE secret dimension
     q = 8380417      # Modulus
-    k = 4         # Error distribution parameter for U(-k, k)
+    a = 4         # Error distribution parameter for U(-a, a)
 
     # --- Calculations ---
-    s = math.sqrt(sum([i**2 for i in range(-k, k + 1)]) / (2 * k + 1))
+    s = math.sqrt(sum([i**2 for i in range(-a, a + 1)]) / (2 * a + 1))
     max_m = n + 100 # Maximum number of samples to consider
 
     # --- Run the optimization with visualization ---
